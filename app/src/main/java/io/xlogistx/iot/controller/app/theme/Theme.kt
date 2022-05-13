@@ -1,10 +1,13 @@
-package io.xlogistix.app.controller.app.ui.theme
+package io.xlogistx.iot.controller.app.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -44,4 +47,16 @@ fun IOTControllerAppTheme(
         shapes = Shapes,
         content = content
     )
+}
+
+@Composable
+fun ThemedPreview(darkTheme: Boolean = false, content: @Composable () -> Unit) {
+    IOTControllerAppTheme(darkTheme) {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
+        ) {
+            content()
+        }
+    }
 }

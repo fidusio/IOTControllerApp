@@ -1,4 +1,4 @@
-package io.xlogistix.app.controller.app.ui.theme
+package io.xlogistx.iot.controller.app.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
